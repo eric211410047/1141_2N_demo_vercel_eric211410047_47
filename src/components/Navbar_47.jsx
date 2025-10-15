@@ -19,7 +19,7 @@ const Navbar_47 = () => {
           <div className='header-right'>
             <ul className='Tku-demo'>
               <li className='menu-item'>
-                <Link to='#' className='active'>
+                <Link to='/' className='active'>
                   Home
                 </Link>
               </li>
