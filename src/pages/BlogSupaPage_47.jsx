@@ -1,24 +1,33 @@
-import { useState, useEffect } from 'react';
-import { FaMugHot } from 'react-icons/fa6';
-import { FaGlobe } from 'react-icons/fa';
-import blogData_47 from '../assets/data/blogData.json';
-import Blog_47 from '../components/Blog_47';
+import { useState , useEffect } from "react";
+import Blog_47 from "../components/Blog_47";
+import { supabase } from "../../db/clientSupabase_47";
 import Wrapper from '../assets/wrappers/Blog2_47';
 
-const BlogNodePage_47 = () => {
-  const [name, setName] = useState('eric');
-  const [id, setId] = useState('211410047');
+const BlogSupaPage_47 = () => {
+  const [name, setName] = useState("eric");
+  const [id, setId] = useState(211410047);
   const [blogs_47, setBlogs_47] = useState([]);
 
+  const fetchBlogFromSupaServer =  async () => {
+    try {
+      let { data, error } = await supabase.from('blog_47').select('*');
+      console.log("blogs", data);
+      setBlogs_47(data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   useEffect(() => {
-    setBlogs_47(blogData_47);
+    fetchBlogFromSupaServer();
   }, []);
+
   return (
     <Wrapper>
       <section className='blogs'>
         <div className='section-title'>
           <h2>
-            blogs from local json --{name},{id}
+            Blogs From Supabase --{name},{id}
           </h2>
         </div>
         <div className='blogs-center'>
@@ -39,6 +48,6 @@ const BlogNodePage_47 = () => {
       </section>
     </Wrapper>
   );
-};
+}; 
 
-export default BlogNodePage_47;
+export default BlogSupaPage_47;

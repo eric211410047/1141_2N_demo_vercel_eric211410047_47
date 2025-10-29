@@ -127,7 +127,23 @@ const Navbar_47 = () => {
                       <Link to='/node_47'>W4-BlogNode_47</Link>
                     </li>
                     <li className='menu-item'>
-                      <Link to='/'>W5-BlogSupa_47 </Link>
+                      <Link to='/supa_47'>W6-BlogSupa_47 </Link>
+                    </li>
+                    <li className='menu-item'>
+                      <Link to='/localjson2_47'>W7-BlogLocaljson2_47 </Link>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+                            <li className='menu-item dropdown'>
+                <Link to='#'>TUTORIALS +</Link>
+                <div className='sub-menu-wrapper slideInUp'>
+                  <ul className='sub-menu'>
+                    <li className='menu-item'>
+                      <Link to='/tutorials/t11_47'>T11_ErrorExamplePage_47</Link>
+                    </li>
+                    <li className='menu-item'>
+                      <Link to='/tutorials/t12_47'>T12_UseStateBasicsPage_47</Link>
                     </li>
                   </ul>
                 </div>

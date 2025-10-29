@@ -1,9 +1,9 @@
 import { FaGlobe } from 'react-icons/fa';
 import { FaMugHot } from 'react-icons/fa6';
-
+import Wrapper from '../assets/wrappers/Blog2_47';
 const BlogStaticPage_47 = () => {
   return (
-    <>
+    <Wrapper>
       <section className='blogs'>
         <div className='section-title'>
           <h2>static blogs --eric,211410047</h2>
@@ -71,7 +71,7 @@ const BlogStaticPage_47 = () => {
           </article>
         </div>
       </section>
-    </>
+    </Wrapper>
   );
 };
 

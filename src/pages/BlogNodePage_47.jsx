@@ -3,7 +3,7 @@ import { FaMugHot } from 'react-icons/fa6';
 import { FaGlobe } from 'react-icons/fa';
 import blogData_47 from '../assets/data/blogData.json';
 import Blog_47 from '../components/Blog_47';
-
+import Wrapper from '../assets/wrappers/Blog2_47';
 const api_url = 'http://localhost:5000/api/blog_47';
 
 const BlogNodePage_47 = () => {
@@ -25,7 +25,7 @@ const BlogNodePage_47 = () => {
     fetchBlogFromNodeServer();
   }, []);
   return (
-    <>
+    <Wrapper>
       <section className='blogs'>
         <div className='section-title'>
           <h2>
@@ -49,7 +49,7 @@ const BlogNodePage_47 = () => {
           })}
         </div>
       </section>
-    </>
+    </Wrapper>
   );
 };
 
